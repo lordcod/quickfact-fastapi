@@ -2,6 +2,7 @@
 import uuid
 from fastapi import APIRouter, HTTPException, Header, Request
 from app.shared.clients.redis_client import client
+from app.shared.protection.utils import POW_BITS
 
 router = APIRouter()
 
@@ -20,4 +21,4 @@ async def get_challenge(
     nonce = str(uuid.uuid4())
     await client.setex(f"nonce:{nonce}", 300, "1")
 
-    return {"server_nonce": nonce, "pow_bits": 5}
+    return {"server_nonce": nonce, "pow_bits": POW_BITS}

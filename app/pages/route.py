@@ -3,7 +3,7 @@ import random
 from fastapi import APIRouter, Depends
 from app.models.models import Fact
 from app.models.schemas import FactSchema
-from app.shared.security.secure_request import SecureRequest
+from app.shared.protection.secure_request import SecureRequest
 
 
 router = APIRouter()

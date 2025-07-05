@@ -6,7 +6,7 @@ from jose import jwt
 
 from app.core.config import SECRET_KEY
 from app.shared.clients.redis_client import client
-from app.shared.security.utils import verify_dpop, jwk_thumbprint
+from app.shared.protection.utils import verify_dpop, jwk_thumbprint
 
 
 class SecureRequest:

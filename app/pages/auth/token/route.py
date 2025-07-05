@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Request
 from app.core.config import SECRET_KEY
 from app.models.schemas import TokenRequest
 from app.shared.clients.redis_client import client
-from app.shared.security.utils import verify_pow, verify_dpop, jwk_thumbprint
+from app.shared.protection.utils import verify_pow, verify_dpop, jwk_thumbprint
 import time
 from jose import jwt
 
