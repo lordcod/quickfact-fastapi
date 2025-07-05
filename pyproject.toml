@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "quickfact-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["LordCode <9999269010dddd@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.14"
+pydantic = "^2.11.7"
+fastfsx = "^1.0.5"
+uvicorn = "^0.35.0"
+tortoise-orm = "^0.25.1"
+python-jose = {extras = ["cryptography"], version = "^3.5.0"}
+redis = {extras = ["asyncio"], version = "^6.2.0"}
+aiohttp = "^3.12.13"
+python-dotenv = "^1.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.32.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
